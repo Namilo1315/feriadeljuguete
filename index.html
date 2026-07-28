@@ -1801,6 +1801,178 @@
       box-shadow:0 10px 24px rgba(216,25,120,.14);
     }
 
+  
+    /* =========================================================
+       ÚLTIMOS AJUSTES MÓVILES
+       - Logo AFJ más grande
+       - Flecha de volver sin círculo
+       ========================================================= */
+    @media (max-width:760px){
+      .top-header-inner{
+        grid-template-columns:46px minmax(0,1fr) 104px;
+      }
+
+      .header-logo-right{
+        width:100px;
+        max-width:none;
+        max-height:59px;
+        object-fit:contain;
+        object-position:right center;
+      }
+
+      .edition-back{
+        width:auto;
+        min-width:0;
+        min-height:0;
+        padding:7px 4px;
+        border:0;
+        border-radius:0;
+        background:transparent;
+        box-shadow:none;
+        font-size:1.15rem;
+      }
+
+      .edition-back:hover,
+      .edition-back:focus-visible{
+        border:0;
+        background:transparent;
+        box-shadow:none;
+        transform:translateX(-2px);
+      }
+    }
+
+    @media (max-width:390px){
+      .top-header-inner{
+        grid-template-columns:43px minmax(0,1fr) 90px;
+      }
+
+      .header-logo-right{
+        width:87px;
+        max-height:55px;
+      }
+
+      .edition-back{
+        width:auto;
+        min-height:0;
+        padding:6px 3px;
+        font-size:1.08rem;
+      }
+    }
+
+  
+    /* =========================================================
+       ENTREGA FINAL MÓVIL
+       - Mapa y galerías con márgenes iguales
+       - Header de ediciones solamente con volver y logo
+       ========================================================= */
+    @media (max-width:760px){
+
+      /* El mapa ya no toca los bordes y conserva el mismo margen a ambos lados */
+      .location-map-link{
+        width:calc(100% - 8px);
+        min-height:365px;
+        margin-inline:auto;
+        border-radius:18px;
+      }
+
+      .location-map-link iframe{
+        width:100%;
+        height:365px;
+        border-radius:18px;
+      }
+
+      /* Márgenes simétricos para las imágenes de las ediciones */
+      .gallery-grid,
+      .event-gallery{
+        width:calc(100% - 8px);
+        margin-inline:auto;
+      }
+
+      /* Header interno: solamente flecha para volver y logo centrado */
+      .edition-modal-bar-inner{
+        position:relative;
+        display:flex;
+        min-height:74px;
+        align-items:center;
+        justify-content:flex-start;
+        padding-block:10px;
+      }
+
+      .edition-event-nav{
+        display:none !important;
+      }
+
+      .edition-bar-brand{
+        position:absolute;
+        top:50%;
+        left:50%;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        transform:translate(-50%,-50%);
+      }
+
+      .edition-bar-brand img{
+        width:108px;
+        max-height:52px;
+      }
+
+      .edition-back{
+        position:relative;
+        z-index:3;
+        width:auto;
+        min-width:0;
+        min-height:0;
+        padding:7px 4px;
+        border:0;
+        border-radius:0;
+        background:transparent;
+        box-shadow:none;
+        font-size:1.15rem;
+      }
+    }
+
+    @media (max-width:390px){
+      .location-map-link,
+      .gallery-grid,
+      .event-gallery{
+        width:calc(100% - 6px);
+      }
+
+      .edition-modal-bar-inner{
+        min-height:70px;
+      }
+
+      .edition-bar-brand img{
+        width:98px;
+        max-height:48px;
+      }
+    }
+    @media (max-width:760px){
+  .top-header-inner{
+    grid-template-columns:46px minmax(0,1fr) 125px;
+  }
+
+  .header-logo-right{
+    width:120px;
+    max-width:none;
+    max-height:65px;
+    object-fit:contain;
+    object-position:right center;
+  }
+}
+
+@media (max-width:390px){
+  .top-header-inner{
+    grid-template-columns:43px minmax(0,1fr) 108px;
+  }
+
+  .header-logo-right{
+    width:103px;
+    max-height:60px;
+  }
+}
+
   </style>
 </head>
 <body>
